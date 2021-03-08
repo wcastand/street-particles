@@ -1,0 +1,9 @@
+{
+  "name": "street-particles",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "query-overpass": "^1.5.5"
+  }
+}

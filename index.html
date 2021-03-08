@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" hidden>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Preload</title>
+		<script src="https://d3js.org/d3-array.v2.min.js"></script>
+		<script src="https://d3js.org/d3-geo.v2.min.js"></script>
+		<script type="module" src="https://cdn.skypack.dev/twind/shim"></script>
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body>
+		<div class="flex justify-start items-center">
+			<form id="form" class="p-4 pr-0 flex justify-center items-center">
+				<input type="text" name="query" id="query" class="p-1 border(2 black solid) rounded" />
+			</form>
+			<form id="getdata" class="p-4 flex justify-center items-center">
+				<select
+					id="select"
+					class="p-1 h-9 mr-4 border(2 black solid) max-w-md rounded"
+					aria-placeholder="Select a town"
+					placeholder="Select a town..."
+				>
+					<option disabled selected value="-1">Select a town...</option>
+				</select>
+				<button
+					type="submit"
+					class="p-1 rounded border(2 black solid) transition-colors bg-white text-black hover:bg-black hover:text-white"
+				>
+					Load
+				</button>
+			</form>
+		</div>
+		<div class="loader">Loading...</div>
+		<canvas id="canvas"></canvas>
+		<script src="main.js" type="module"></script>
+	</body>
+</html>
